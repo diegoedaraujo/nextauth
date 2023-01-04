@@ -33,7 +33,6 @@ api.interceptors.response.use(
               refreshToken,
             })
             .then((response) => {
-              console.log("Atualizando token");
               const { token } = response.data;
               setCookie(undefined, "nextauth.token", token, {
                 maxAge: 60 * 60 * 24 * 30, // 30 days
